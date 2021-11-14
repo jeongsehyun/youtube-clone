@@ -12,6 +12,11 @@ function App({ youtube }) {
     setSelectedVideo(video);
   };
 
+  const showMostPopular = () => {
+    youtube.mostPopular().then((videos) => setVideos(videos));
+    setSelectedVideo(null);
+  };
+
   const search = (query) => {
     youtube.search(query).then((videos) => {
       setVideos(videos);
@@ -25,7 +30,7 @@ function App({ youtube }) {
 
   return (
     <div className={styles.app}>
-      <SearchHeader onSearch={search} />
+      <SearchHeader onSearch={search} showMostPopular={showMostPopular} />
       <section className={styles.content}>
         {selectedVideo && (
           <div className={styles.detail}>

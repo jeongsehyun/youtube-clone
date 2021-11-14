@@ -1,7 +1,7 @@
 import styles from "./search_header.module.css";
 import React, { useRef, useState } from "react";
 
-const SearchHeader = ({ onSearch }) => {
+const SearchHeader = ({ onSearch, showMostPopular }) => {
   const inputRef = useRef();
   const [value, setValue] = useState("");
 
@@ -21,6 +21,11 @@ const SearchHeader = ({ onSearch }) => {
     handleSearch();
   };
 
+  const onLogoClick = () => {
+    clearText();
+    showMostPopular();
+  };
+
   const onKeyPress = (event) => {
     if (event.key === "Enter") {
       handleSearch();
@@ -28,10 +33,10 @@ const SearchHeader = ({ onSearch }) => {
   };
   return (
     <header className={styles.header}>
-      <div className={styles.logo}>
+      <button className={styles.logo} type="button" onClick={onLogoClick}>
         <img className={styles.img} src="/images/logo.png" alt="logo" />
         <h1 className={styles.title}>Youtube</h1>
-      </div>
+      </button>
       <div className={styles.inputBox}>
         <input
           ref={inputRef}
