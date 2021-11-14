@@ -20,6 +20,23 @@ class Youtube {
 
     return response.data.items;
   }
+
+  async search(query) {
+    const response = await this.client.get("search", {
+      params: {
+        part: "snippet",
+        regionCode: "KR",
+        maxResults: 30,
+        q: query,
+        type: "video",
+      },
+    });
+
+    return response.data.items.map((item) => ({
+      ...item,
+      id: item.id.videoId,
+    }));
+  }
 }
 
 export default Youtube;
