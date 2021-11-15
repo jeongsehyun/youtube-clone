@@ -1,4 +1,4 @@
-# YouTube Clone
+# [🔗YouTube Clone](https://jeongsehyun.github.io/youtube-clone/)
 
 인기 동영상 리스트 조회, 사용자가 검색한 동영상 리스트 조회 두가지의 기능만이 구현된 간단한 유튜브 클론 프로젝트입니다.
 
