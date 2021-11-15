@@ -17,6 +17,18 @@
   background: none;
   cursor: pointer;
 }
+@media all and (min-width:480px) and (max-width:767px) {
+  .logo h1 {
+    display: none;
+  }
+}
+@media all and (max-width:479px) {
+  .header {
+    flex-direction: column;
+    height: 9rem;
+    width: 100%;
+  }
+}
 
 .img {
   margin-right: 0.313rem;
@@ -35,7 +47,7 @@
 .input {
   height: 100%;
   margin: 0 1rem;
-  flex: 1 1 100%;
+  flex: 1 1;
   font-size: 1.2rem;
   outline: 0;
   border: 0px;
@@ -49,6 +61,17 @@ input::-webkit-search-cancel-button,
 input::-webkit-search-results-button,
 input::-webkit-search-results-decoration{
     display:none;
+}
+
+@media all and (min-width:480px) and (max-width:767px) {
+  .input {
+    width: 220px;
+  }
+}
+@media all and (max-width:479px) {
+  .input {
+    width: 185px;
+  }
 }
 
 .clearButton {

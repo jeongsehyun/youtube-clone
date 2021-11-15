@@ -1,10 +1,35 @@
-.app {
-  width: 1024px;
-  min-width: 1024px;
+@media all and (min-width:1024px) {
+  .app {
+    width: 1024px;
+    min-width: 1024px;
+  }
+}
+@media all and (min-width:768px) and (max-width:1023px) {
+  .app {
+    width: 768px;
+    min-width: 768px;
+  }
+}
+@media all and (min-width:480px) and (max-width:767px) {
+  .app {
+    width: 480px;
+    min-width: 480px;
+  }
+}
+@media all and (max-width:479px) {
+  .app {
+    width: 360px;
+    min-width: 360px;
+  }
 }
 
 .content {
   display: flex;
+}
+@media all and (max-width:767px) {
+  .content {
+    flex-direction: column;
+  }
 }
 
 .detail {
