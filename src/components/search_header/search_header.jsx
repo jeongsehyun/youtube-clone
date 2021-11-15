@@ -34,7 +34,7 @@ const SearchHeader = ({ onSearch, showMostPopular }) => {
   return (
     <header className={styles.header}>
       <button className={styles.logo} type="button" onClick={onLogoClick}>
-        <img className={styles.img} src="/images/logo.png" alt="logo" />
+        <img className={styles.img} src="./images/logo.png" alt="logo" />
         <h1 className={styles.title}>Youtube</h1>
       </button>
       <div className={styles.inputBox}>
@@ -54,7 +54,7 @@ const SearchHeader = ({ onSearch, showMostPopular }) => {
           >
             <img
               className={styles.clearButtonImg}
-              src="/images/clear.png"
+              src="./images/clear.png"
               alt="clear text"
             />
           </button>
@@ -62,7 +62,7 @@ const SearchHeader = ({ onSearch, showMostPopular }) => {
         <button className={styles.button} type="submit" onClick={onClick}>
           <img
             className={styles.buttonImg}
-            src="/images/search.png"
+            src="./images/search.png"
             alt="search"
           />
         </button>
